@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <div class="mx-44 my-10 space-y-5">
+            <div class=' border-b bg-slate-400 p-10 border-black flex space-x-6'>
+                <h1 class="text-3xl font-semibold">
+                    <a href="/">
+                        Exercise Tracker
+                    </a>
+                </h1>
+                <nav class=" flex mt-1.5">
+                    <ul class="flex text-xl space-x-4">
+                        <li>
+                            <a href="Exercise.ejs">
+                                Exercise
+                            </a>
+                        </li>
+                        <li>
+                            <a href="createExercise.ejs">
+                                Create Exercise
+                            </a>
+                        </li>
+                        <li>
+                            <a href="CreateUser.ejs">
+                                Create User
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="space-y-5">
+                <h1 class="text-3xl">
+                    Logged Exercises
+                </h1>
+                <div class="flex justify-between border-b border-t bg-slate-300 text-lg">
+                    <% logs.forEach((log)=>{ %>
+                        <p>Name
+                            <%= log.name %>
+                        </p>
+                        <% }) %>
+
+                            <p>Description</p>
+                            <p>Duration</p>
+                            <p>Date</p>
+                            <p>Action</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
