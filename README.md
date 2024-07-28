@@ -8,3 +8,5 @@ A Backend Project that I did as an Internship task at Bytewise
 - EJS (for FrontEnd)
 - Tailwind
 - Nodemon
+
+### Apply Tailwind in your Project via CDN `<script src="https://cdn.tailwindcss.com"></script>`
