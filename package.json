@@ -1,26 +1,24 @@
 {
-  "name": "bytewise",
-  "version": "1.0.0",
-  "description": "A task for the leaning of ExpressJs during my internship",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "mongoose": "^8.5.1",
-    "serve-static": "^1.15.0",
-    "shortid": "^2.2.16"
+    "mongo": "^0.1.0",
+    "mongoose": "^8.5.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
     "nodemon": "^3.1.4",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.6"
-  }
+    "tailwindcss": "^3.4.7"
+  },
+  "name": "bytewise",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Burhan Ahmed",
+  "license": "ISC",
+  "description": "Just an Internship task for practice"
 }
