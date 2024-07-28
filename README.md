@@ -9,4 +9,5 @@ A Backend Project that I did as an Internship task at Bytewise
 - Tailwind
 - Nodemon
 
-### Apply Tailwind in your Project via CDN `<script src="https://cdn.tailwindcss.com"></script>`
+### Apply Tailwind in your Project via CDN <br>
+`<script src="https://cdn.tailwindcss.com"></script>`
