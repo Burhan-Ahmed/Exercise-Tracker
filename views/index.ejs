@@ -4,11 +4,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Expense Tracker</title>
+        <title>Exercise Tracker</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="icon" href="/public/gym.png" type="image/x-icon">
     </head>
 
     <body>
-        This is EJS file
+        <div class='mx-44 my-10 border bg-cyan-400 p-10 border-black flex space-x-6'>
+            <h1 class="text-3xl">Exercise Tracker</h1>
+            <nav class=" flex mt-1.5">
+                <ul class="flex text-xl space-x-4">
+                    <li>
+                        <a href="Exercise.ejs">
+                            Exercise
+                        </a>
+                    </li>
+                    <li>
+                        <a href="createExercise.ejs">
+                            Create Exercise
+                        </a>
+                    </li>
+                    <li>
+                        <a href="CreateUser.ejs">
+                            Create User
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </body>
 
 </html>
