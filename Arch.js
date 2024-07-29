@@ -6,6 +6,6 @@ const exerciseSchema = new mongoose.Schema({
     date: Date
 })
 
-const Exercise = mongoose.model('UserData', exerciseSchema);
+const Exercise = mongoose.model('ExercisesDatasets', exerciseSchema);
 
 module.exports = Exercise;

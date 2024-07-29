@@ -5,7 +5,7 @@ const path = require('path');
 const user = require('./Arch')
 port = 4000
 
-mongoose.connect('mongodb://localhost:27017/ExercisesDataset', {
+mongoose.connect('mongodb://localhost:27017/Exercises', {
 }).then(
     console.log('DataBase Connected')
 )
@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
 })
 app.get('/exercise.ejs', async (req, res) => {
     const logs = await user.find()
-    console.log(logs)
     res.render('exercise.ejs', { logs })
 })
 app.get('/createExercise.ejs', (req, res) => {
