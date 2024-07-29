@@ -6,20 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Exercise</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="font-poppins">
         <div class="mx-44 my-10 space-y-5">
             <div class=' border-b bg-slate-400 p-10 border-black flex space-x-6'>
                 <h1 class="text-3xl font-semibold">
-                    <a href="/">
-                        Exercise Tracker
-                    </a>
+                    Exercise Tracker
                 </h1>
                 <nav class=" flex mt-1.5">
-                    <ul class="flex text-xl space-x-4">
+                    <ul class="flex text-xl space-x-5">
                         <li>
-                            <a href="Exercise.ejs">
+                            <a href="/">
                                 Exercise
                             </a>
                         </li>
@@ -29,8 +28,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="CreateUser.ejs">
-                                Create User
+                            <a href="Statistical.ejs">
+                                Exercise Statistics
                             </a>
                         </li>
                     </ul>
@@ -40,18 +39,44 @@
                 <h1 class="text-3xl">
                     Logged Exercises
                 </h1>
-                <div class="flex justify-between border-b border-t bg-slate-300 text-lg">
-                    <% logs.forEach((log)=>{ %>
-                        <p>Name</p>
+                <div
+                    class="font-medium grid border-black text-center grid-cols-5 border-b border-t bg-slate-300 text-lg">
+                    <p>Name</p>
+                    <p>Description</p>
+                    <p>Duration (Minutes)</p>
+                    <p>Date</p>
+                    <p>Action</p>
+                </div>
+                <% logs.forEach((log)=>{ %>
+                    <div class="grid grid-cols-5 text-center border-b">
                         <p>
                             <%= log.name %>
                         </p>
-                        <% }) %>
-                            <p>Description</p>
-                            <p>Duration</p>
-                            <p>Date</p>
-                            <p>Action</p>
-                </div>
+                        <p>
+                            <%= log.description %>
+                        </p>
+                        <p>
+                            <%= log.duration %>
+                        </p>
+                        <p>
+                            <%= new Date(log.date).toDateString() %>
+                        </p>
+                        <div class="text-cyan-600 flex justify-center font-semibold">
+                            <button>
+                                <a href="/">
+                                    Edit
+                                </a>
+                            </button>
+                            -
+                            <form method="post">
+                                <input type="hidden" name="id" value="<%= log.id %>">
+                                <button>
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <% }) %>
             </div>
         </div>
     </body>
