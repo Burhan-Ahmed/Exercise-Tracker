@@ -62,13 +62,13 @@
                             <%= new Date(log.date).toDateString() %>
                         </p>
                         <div class="text-cyan-600 flex justify-center font-semibold">
-                            <button>
-                                <a href="/">
+                            <form action="/edit/<%= log.id %>" method="get">
+                                <button type="submit">
                                     Edit
-                                </a>
-                            </button>
+                                </button>
+                            </form>
                             -
-                            <form method="post">
+                            <form action="/del" method="post">
                                 <input type="hidden" name="id" value="<%= log.id %>">
                                 <button>
                                     Delete

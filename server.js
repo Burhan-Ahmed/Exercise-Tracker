@@ -16,7 +16,28 @@ app.get('/', async (req, res) => {
     const logs = await user.find()
     res.render('exercise.ejs', { logs })
 })
-app.post('/', async (req, res) => {
+
+app.get('/edit/:id', async (req, res) => {
+    const id = req.params.id;
+    const userData = await user.findById(id);
+    res.render('Edit.ejs', { userData })
+})
+
+app.post('/edit/:id', async (req, res) => {
+    const { id } = req.params;
+    const { name, description, duration, date } = req.body;
+
+    const updateData = {
+        name,
+        description,
+        duration,
+        date
+    };
+    await user.findByIdAndUpdate(id, updateData);
+    res.send('User updated successfully');
+})
+
+app.post('/del', async (req, res) => {
     const id = req.body.id
     await user.findByIdAndDelete(id)
     res.send('User deleted successfully');

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <div class="mx-52 my-20 border shadow-xl rounded-lg p-20 space-y-5">
+            <form action="/edit/<%= userData._id %>" method="post">
+                <div class="space-y-5">
+                    <div>
+                        <label for="name">Username </label>
+                        <input id="name" name="name" value="<%= userData.name %>"
+                            class="outline-none flex flex-col border-b w-full ps-5" type="text"
+                            placeholder="Enter Your Name" name="fdata">
+                    </div>
+                    <div>
+                        <label for="description">Description</label>
+                        <input id="description" name="description" value="<%= userData.description %>"
+                            class="outline-none flex flex-col border-b w-full ps-5" type="text"
+                            placeholder="Enter Your Name" name="fdata">
+                    </div>
+                    <div>
+                        <label for="duration">Duration</label>
+                        <input id="duration" name="duration" value="<%= userData.duration %>"
+                            class="outline-none flex flex-col border-b w-full ps-5" type="number"
+                            placeholder="Enter Your Name" name="fdata">
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input id="date" name="date" value="<%= userData.date %>"
+                            class="outline-none flex flex-col border-b w-full ps-5" type="date"
+                            placeholder="Enter Your Name" name="fdata">
+                    </div>
+                </div>
+                <button type="submit"
+                    class="mt-10 border rounded-md border-black text-lg text-white bg-cyan-600 px-5 py-1">
+                    Update Log
+                </button>
+                <a href="/" class="mt-10 border rounded-md border-black text-lg text-white bg-rose-600 px-5 py-1">
+                    Back
+                </a>
+            </form>
+
+        </div>
+    </body>
+
+</html>
