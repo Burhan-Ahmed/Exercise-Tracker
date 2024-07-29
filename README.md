@@ -1,6 +1,9 @@
 # Express-Project
 A Backend Project that I did as an Internship task at Bytewise
 ![Alt text](imgs/home.PNG)
+![Alt text](imgs/Creation.PNG)
+![Alt text](imgs/editpage.PNG)
+![Alt text](imgs/stats.PNG)
 ## Languages and Tools
 - Express
 - NodeJs
